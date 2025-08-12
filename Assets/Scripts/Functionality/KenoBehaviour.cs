@@ -37,6 +37,8 @@ public class KenoBehaviour : MonoBehaviour
 
   internal int betCounter = 0;
 
+  internal bool IsKenoComplete = false;
+
   internal void PickRandoms()
   {
     SelectedList.Clear();
@@ -151,6 +153,8 @@ public class KenoBehaviour : MonoBehaviour
 
   private IEnumerator PlayGameRoutine()
   {
+    IsKenoComplete = false;
+
     if (socketIOManager)
     {
       socketIOManager.isResultdone = false;
@@ -179,6 +183,8 @@ public class KenoBehaviour : MonoBehaviour
     uiManager.CheckFinalWinning();
     uiManager.EnableReset();
     if (DisableScreen_object) DisableScreen_object.SetActive(false);
+    IsKenoComplete = true;
+
   }
 
   internal void ResetButtons()

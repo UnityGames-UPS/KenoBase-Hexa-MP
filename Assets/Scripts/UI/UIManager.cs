@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
   [SerializeField] private Button Random_Button;
   [SerializeField] private Button Play_Button;
   [SerializeField] private Button AutoPlay_Button;
+  [SerializeField] private Button StopAutoPlay_Button;
   [SerializeField] private Button StakePlus_Button;
   [SerializeField] private Button StakeMinus_Button;
   [SerializeField] private Button Reset_Button;
@@ -53,8 +54,22 @@ public class UIManager : MonoBehaviour
   private int stake = 5;
   internal bool isReset = false;
 
+  [Header("Disconnection Popup")]
+  [SerializeField]
+  private Button CloseDisconnect_Button;
+  [SerializeField]
+  private GameObject DisconnectPopup_Object;
+
+  [Header("Reconnection Popup")]
+  [SerializeField]
+  private TMP_Text reconnect_Text;
+  [SerializeField]
+  private GameObject ReconnectPopup_Object;
+  internal bool IsAutoPlay = false;
+
   void Start()
   {
+    IsAutoPlay = false;
     if (Random_Button) Random_Button.onClick.RemoveAllListeners();
     if (Random_Button) Random_Button.onClick.AddListener(PickRandomIndices);
 
@@ -84,6 +99,12 @@ public class UIManager : MonoBehaviour
     stake = 5;
     if (Stake_Text) Stake_Text.text = stake.ToString();
     if (TotalBet_text) TotalBet_text.text = stake.ToString();
+
+    AutoPlay_Button.onClick.RemoveAllListeners();
+    AutoPlay_Button.onClick.AddListener(AutoSpin);
+
+    StopAutoPlay_Button.onClick.RemoveAllListeners();
+    StopAutoPlay_Button.onClick.AddListener(StopAutoPlayKeeno);
     //if (Win_Text) Win_Text.text = winning.ToString();
     // Application.ExternalCall("window.parent.postMessage", "OnEnter", "*");
   }
@@ -111,12 +132,48 @@ public class UIManager : MonoBehaviour
     });
   }
 
+
+  private void AutoSpin()
+  {
+    if (!IsAutoPlay)
+    {
+
+      IsAutoPlay = true;
+      if (StopAutoPlay_Button) StopAutoPlay_Button.gameObject.SetActive(true);
+      if (AutoPlay_Button) AutoPlay_Button.gameObject.SetActive(false);
+      StartCoroutine(AutoPlayKeenoRoutine());
+
+    }
+  }
+
+  private IEnumerator AutoPlayKeenoRoutine()
+  {
+    while (IsAutoPlay)
+    {
+      PlayKeeno();
+      yield return null;
+      yield return new WaitUntil(() => KenoManager.IsKenoComplete);
+    }
+  }
+
+  private void StopAutoPlayKeeno()
+  {
+    if (IsAutoPlay)
+    {
+      IsAutoPlay = false;
+      if (StopAutoPlay_Button) StopAutoPlay_Button.gameObject.SetActive(false);
+      if (AutoPlay_Button) AutoPlay_Button.gameObject.SetActive(true);
+      //StartCoroutine(StopAutoSpinCoroutine());
+      IsAutoPlay = false;
+    }
+  }
+
   private void ChangeStake(bool type)
   {
     if (type)
     {
       KenoManager.betCounter++;
-      if (KenoManager.betCounter >= socketManager.initialData.Bets.Count)
+      if (KenoManager.betCounter >= socketManager.initialData.bets.Count)
       {
         KenoManager.betCounter = 0;
       }
@@ -126,18 +183,19 @@ public class UIManager : MonoBehaviour
       KenoManager.betCounter--;
       if (KenoManager.betCounter < 0)
       {
-        KenoManager.betCounter = socketManager.initialData.Bets.Count - 1;
+        KenoManager.betCounter = socketManager.initialData.bets.Count - 1;
       }
     }
-    if (Stake_Text) Stake_Text.text = socketManager.initialData.Bets[KenoManager.betCounter].ToString();
-    if (TotalBet_text) TotalBet_text.text = socketManager.initialData.Bets[KenoManager.betCounter].ToString();
+    if (Stake_Text) Stake_Text.text = socketManager.initialData.bets[KenoManager.betCounter].ToString();
+    if (TotalBet_text) TotalBet_text.text = socketManager.initialData.bets[KenoManager.betCounter].ToString();
     UpdateSelectedText();
   }
 
-  internal void initGame(){
+  internal void initGame()
+  {
     UpdateSelectedText();
-    if (Stake_Text) Stake_Text.text = socketManager.initialData.Bets[0].ToString();
-    if (TotalBet_text) TotalBet_text.text = socketManager.initialData.Bets[0].ToString();
+    if (Stake_Text) Stake_Text.text = socketManager.initialData.bets[0].ToString();
+    if (TotalBet_text) TotalBet_text.text = socketManager.initialData.bets[0].ToString();
   }
 
   private void PickRandomIndices()
@@ -160,7 +218,7 @@ public class UIManager : MonoBehaviour
   private void WinPopupEnable()
   {
     CancelInvoke("WinPopupDisable");
-    if(PopupWin_Text) PopupWin_Text.text = socketManager.playerdata.currentWining.ToString("F2");
+    if (PopupWin_Text) PopupWin_Text.text = socketManager.resultData.currenWinning.ToString("F2");
     if (TitleAnim) TitleAnim.StartAnimation();
     if (WinPopup_Transform) WinPopup_Transform.localScale = Vector3.zero;
     if (MainPopup_Object) MainPopup_Object.SetActive(true);
@@ -198,8 +256,9 @@ public class UIManager : MonoBehaviour
 
   internal void CheckFinalWinning()
   {
-    if(socketManager.playerdata.currentWining>0){
-      WinningsTextUpdate(socketManager.playerdata.currentWining);
+    if (socketManager.resultData.currenWinning > 0)
+    {
+      WinningsTextUpdate(socketManager.resultData.currenWinning);
       WinPopupEnable();
     }
   }
@@ -226,7 +285,7 @@ public class UIManager : MonoBehaviour
     if (KenoManager.selectionCounter <= 1)
     {
       Hits_Text[0].text = "1";
-      Payout_Text[0].text = (socketManager.initialData.Paytable[0][0] * socketManager.initialData.Bets[KenoManager.betCounter]).ToString("F2");
+      Payout_Text[0].text = (socketManager.initialData.paytable[0][0] * socketManager.initialData.bets[KenoManager.betCounter]).ToString("F2");
     }
     else
     {
@@ -234,9 +293,9 @@ public class UIManager : MonoBehaviour
       {
         if (Hits_Text[i]) Hits_Text[i].text = (i + 1).ToString();
       }
-      for(int i=0;i<socketManager.initialData.Paytable[KenoManager.selectionCounter-1].Count;i++)
+      for (int i = 0; i < socketManager.initialData.paytable[KenoManager.selectionCounter - 1].Count; i++)
       {
-        if (Payout_Text[i]) Payout_Text[i].text = (socketManager.initialData.Paytable[KenoManager.selectionCounter-1][i] * socketManager.initialData.Bets[KenoManager.betCounter]).ToString("F2");  
+        if (Payout_Text[i]) Payout_Text[i].text = (socketManager.initialData.paytable[KenoManager.selectionCounter - 1][i] * socketManager.initialData.bets[KenoManager.betCounter]).ToString("F2");
       }
     }
   }
@@ -267,5 +326,43 @@ public class UIManager : MonoBehaviour
     KenoManager.CleanPage();
     CheckPlayButton(false);
   }
+
+  internal void DisconnectionPopup()
+  {
+    OpenPopup(DisconnectPopup_Object);
+  }
+
+  internal void ReconnectionPopup()
+  {
+    OpenPopup(ReconnectPopup_Object);
+  }
+
+  internal void CheckAndClosePopups()
+  {
+    if (ReconnectPopup_Object.activeInHierarchy)
+    {
+      ClosePopup(ReconnectPopup_Object);
+    }
+    if (DisconnectPopup_Object.activeInHierarchy)
+    {
+      ClosePopup(DisconnectPopup_Object);
+    }
+  }
+
+  private void ClosePopup(GameObject Popup)
+  {
+    if (Popup) Popup.SetActive(false);
+    if (!DisconnectPopup_Object.activeSelf)
+    {
+      if (MainPopup_Object) MainPopup_Object.SetActive(false);
+    }
+  }
+
+  private void OpenPopup(GameObject Popup)
+  {
+    if (Popup) Popup.SetActive(true);
+    if (MainPopup_Object) MainPopup_Object.SetActive(true);
+  }
+
 
 }
