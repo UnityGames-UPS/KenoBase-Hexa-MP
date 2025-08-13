@@ -19,12 +19,27 @@ public class UIManager : MonoBehaviour
   [SerializeField] private Button Delete_Button;
   [SerializeField] private Button GameExit_Button;
   [SerializeField] private Button MaxPopup_Button;
+  [SerializeField] private Button Info_Button;
+  [SerializeField] private Button CloseInfo_Button;
+
+  [SerializeField] private Button Sound_Button;
+  [SerializeField] private Button CloseSound_Button;
+  [SerializeField] private Button Music_Button;
+  [SerializeField] private Button CloseMusic_Button;
+
+  [SerializeField] private Button QuitGame_Button;
+  [SerializeField] private Button YesQuit_Button;
+  [SerializeField] private Button NoQuit_Button;
+
+
 
   [Header("Texts")]
   [SerializeField] private TMP_Text Stake_Text;
   [SerializeField] private TMP_Text PopupWin_Text;
   [SerializeField] private TMP_Text Win_Text;
   [SerializeField] private TMP_Text TotalBet_text;
+  [SerializeField] private TMP_Text Desc_Text;
+  public TMP_Text BalanceAmt_Text;
 
   [Header("Lists")]
   [SerializeField] private List<TMP_Text> Payout_Text;
@@ -37,6 +52,7 @@ public class UIManager : MonoBehaviour
   [SerializeField] private GameObject CoinValueDisable_object;
   [SerializeField] private GameObject StarAnim_Object;
 
+
   [Header("Scripts")]
   [SerializeField] private KenoBehaviour KenoManager;
   [SerializeField] private SocketIOManager socketManager;
@@ -47,6 +63,9 @@ public class UIManager : MonoBehaviour
   [SerializeField] private GameObject WinPopup_Object;
   [SerializeField] private Transform WinPopup_Transform;
   [SerializeField] private GameObject CoinAnim_Object;
+  [SerializeField] private GameObject InfoScreen_object;
+  [SerializeField] private GameObject QuitGame_Object;
+
 
   [Header("Image Animation Script")]
   [SerializeField] private ImageAnimation TitleAnim;
@@ -67,6 +86,8 @@ public class UIManager : MonoBehaviour
   private GameObject ReconnectPopup_Object;
   internal bool IsAutoPlay = false;
 
+  [SerializeField] private AudioController audioController;
+
   void Start()
   {
     IsAutoPlay = false;
@@ -79,10 +100,10 @@ public class UIManager : MonoBehaviour
     CheckPlayButton(false);
 
     if (StakePlus_Button) StakePlus_Button.onClick.RemoveAllListeners();
-    if (StakePlus_Button) StakePlus_Button.onClick.AddListener(delegate { ChangeStake(true); });
+    if (StakePlus_Button) StakePlus_Button.onClick.AddListener(delegate { ChangeStake(true); audioController.PlayButtonAudio(); });
 
     if (StakeMinus_Button) StakeMinus_Button.onClick.RemoveAllListeners();
-    if (StakeMinus_Button) StakeMinus_Button.onClick.AddListener(delegate { ChangeStake(false); });
+    if (StakeMinus_Button) StakeMinus_Button.onClick.AddListener(delegate { ChangeStake(false); audioController.PlayButtonAudio(); });
 
     if (Reset_Button) Reset_Button.onClick.RemoveAllListeners();
     if (Reset_Button) Reset_Button.onClick.AddListener(ResetGame);
@@ -105,6 +126,31 @@ public class UIManager : MonoBehaviour
 
     StopAutoPlay_Button.onClick.RemoveAllListeners();
     StopAutoPlay_Button.onClick.AddListener(StopAutoPlayKeeno);
+    Info_Button.onClick.RemoveAllListeners();
+    Info_Button.onClick.AddListener(OpenInfoPanel);
+    CloseInfo_Button.onClick.RemoveAllListeners();
+    CloseInfo_Button.onClick.AddListener(CloseInfoPanel);
+
+    Music_Button.onClick.RemoveAllListeners();
+    Music_Button.onClick.AddListener(delegate { audioController.PlayButtonAudio(); ToggleMusic(true); });
+
+    CloseMusic_Button.onClick.RemoveAllListeners();
+    CloseMusic_Button.onClick.AddListener(delegate { audioController.PlayButtonAudio(); ToggleMusic(false); });
+
+    Sound_Button.onClick.RemoveAllListeners();
+    Sound_Button.onClick.AddListener(delegate { audioController.PlayButtonAudio(); ToggleSound(true); });
+
+    CloseSound_Button.onClick.RemoveAllListeners();
+    CloseSound_Button.onClick.AddListener(delegate { audioController.PlayButtonAudio(); ToggleSound(false); });
+
+    QuitGame_Button.onClick.RemoveAllListeners();
+    QuitGame_Button.onClick.AddListener(OpenQuitGamePopup);
+
+    YesQuit_Button.onClick.RemoveAllListeners();
+    YesQuit_Button.onClick.AddListener(QuitGame);
+
+    NoQuit_Button.onClick.RemoveAllListeners();
+    NoQuit_Button.onClick.AddListener(CloseQuitGamePopup);
     //if (Win_Text) Win_Text.text = winning.ToString();
     // Application.ExternalCall("window.parent.postMessage", "OnEnter", "*");
   }
@@ -116,6 +162,7 @@ public class UIManager : MonoBehaviour
 
   private void PlayKeeno()
   {
+    audioController.PlayButtonAudio();
     if (StarAnim_Object) StarAnim_Object.SetActive(true);
     if (isReset)
     {
@@ -125,6 +172,8 @@ public class UIManager : MonoBehaviour
     CheckPlayButton(false);
     if (Delete_Button) Delete_Button.interactable = false;
     if (CoinValueDisable_object) CoinValueDisable_object.SetActive(true);
+    Debug.Log($"Balance before play " + (socketManager.playerdata.balance - socketManager.initialData.bets[KenoManager.betCounter]));
+    BalanceAmt_Text.text = (socketManager.playerdata.balance - socketManager.initialData.bets[KenoManager.betCounter]).ToString("f2");
     KenoManager.PlayKeeno();
     DOVirtual.DelayedCall(0.5f, () =>
     {
@@ -135,6 +184,7 @@ public class UIManager : MonoBehaviour
 
   private void AutoSpin()
   {
+    audioController.PlayButtonAudio();
     if (!IsAutoPlay)
     {
 
@@ -158,6 +208,7 @@ public class UIManager : MonoBehaviour
 
   private void StopAutoPlayKeeno()
   {
+    audioController.PlayButtonAudio();
     if (IsAutoPlay)
     {
       IsAutoPlay = false;
@@ -194,12 +245,15 @@ public class UIManager : MonoBehaviour
   internal void initGame()
   {
     UpdateSelectedText();
+    BalanceAmt_Text.text = socketManager.playerdata.balance.ToString("F2");
     if (Stake_Text) Stake_Text.text = socketManager.initialData.bets[0].ToString();
     if (TotalBet_text) TotalBet_text.text = socketManager.initialData.bets[0].ToString();
+    Desc_Text.text = socketManager.initUIData.description;
   }
 
   private void PickRandomIndices()
   {
+    audioController.PlayButtonAudio();
     if (isReset)
     {
       ResetGame();
@@ -233,6 +287,7 @@ public class UIManager : MonoBehaviour
     if (MainPopup_Object) MainPopup_Object.SetActive(false);
     if (WinPopup_Object) WinPopup_Object.SetActive(false);
     if (CoinAnim_Object) CoinAnim_Object.SetActive(false);
+    KenoManager.CheckPopup = false;
   }
 
   internal void MaxPopupEnable()
@@ -245,6 +300,7 @@ public class UIManager : MonoBehaviour
 
   private void MaxPopupDisable()
   {
+    audioController.PlayButtonAudio();
     if (MainPopup_Object) MainPopup_Object.SetActive(false);
     if (MaxPopup_Object) MaxPopup_Object.SetActive(false);
   }
@@ -260,6 +316,12 @@ public class UIManager : MonoBehaviour
     {
       WinningsTextUpdate(socketManager.resultData.currenWinning);
       WinPopupEnable();
+      audioController.PlayMainAudio(2);
+    }
+    else
+    {
+      KenoManager.CheckPopup = false;
+
     }
   }
 
@@ -310,6 +372,7 @@ public class UIManager : MonoBehaviour
 
   private void ResetGame()
   {
+    audioController.PlayButtonAudio();
     KenoManager.ResetWinAnim();
     if (TitleAnim) TitleAnim.StopAnimation();
     KenoManager.ResetButtons();
@@ -320,6 +383,7 @@ public class UIManager : MonoBehaviour
 
   private void CleanButtons()
   {
+    audioController.PlayButtonAudio();
     // BetAmountUpdate(0);
     UpdateSelectedText();
     WinningsTextUpdate(0);
@@ -362,6 +426,74 @@ public class UIManager : MonoBehaviour
   {
     if (Popup) Popup.SetActive(true);
     if (MainPopup_Object) MainPopup_Object.SetActive(true);
+  }
+
+  private void OpenInfoPanel()
+  {
+    audioController.PlayButtonAudio();
+    OpenPopup(InfoScreen_object);
+  }
+  private void CloseInfoPanel()
+  {
+    audioController.PlayButtonAudio();
+    ClosePopup(InfoScreen_object);
+    if (MainPopup_Object) MainPopup_Object.SetActive(false);
+  }
+
+  private void ToggleSound(bool IsOn)
+  {
+    Debug.Log($"toggle Sound called " + IsOn);
+    if (IsOn)
+    {
+      Sound_Button.gameObject.SetActive(false);
+      CloseSound_Button.gameObject.SetActive(true);
+      audioController.ToggleBgSound(false);
+
+    }
+    else
+    {
+      Sound_Button.gameObject.SetActive(true);
+      CloseSound_Button.gameObject.SetActive(false);
+      audioController.ToggleBgSound(true);
+    }
+
+  }
+
+  private void ToggleMusic(bool IsOn)
+  {
+    Debug.Log($"toggle Music called " + IsOn);
+
+    if (IsOn)
+    {
+      Music_Button.gameObject.SetActive(false);
+      CloseMusic_Button.gameObject.SetActive(true);
+      audioController.ToggleMainSound(false);
+    }
+    else
+    {
+      Music_Button.gameObject.SetActive(true);
+      CloseMusic_Button.gameObject.SetActive(false);
+      audioController.ToggleMainSound(true);
+    }
+
+  }
+
+  private void OpenQuitGamePopup()
+  {
+    audioController.PlayButtonAudio();
+    OpenPopup(QuitGame_Object);
+  }
+  private
+  void CloseQuitGamePopup()
+  {
+    audioController.PlayButtonAudio();
+    ClosePopup(QuitGame_Object);
+  }
+  private void QuitGame()
+  {
+    audioController.PlayButtonAudio();
+    StartCoroutine(socketManager.CloseSocket());
+    ClosePopup(QuitGame_Object);
   }
 
 

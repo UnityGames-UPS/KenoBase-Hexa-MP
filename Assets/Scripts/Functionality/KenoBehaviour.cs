@@ -38,6 +38,10 @@ public class KenoBehaviour : MonoBehaviour
   internal int betCounter = 0;
 
   internal bool IsKenoComplete = false;
+  internal bool CheckPopup = false;
+
+  [SerializeField] AudioController audioController;
+
 
   internal void PickRandoms()
   {
@@ -153,7 +157,10 @@ public class KenoBehaviour : MonoBehaviour
 
   private IEnumerator PlayGameRoutine()
   {
+    Debug.Log($"Starting Keno Game with {SelectedList.Count} selections.");
+    // uiManager.BalanceAmt_Text.text = socketIOManager.playerdata.balance.ToString("F2");
     IsKenoComplete = false;
+    audioController.PlayMainAudio(1);
 
     if (socketIOManager)
     {
@@ -180,11 +187,22 @@ public class KenoBehaviour : MonoBehaviour
       KenoButtonScripts[ResultList[i] - 1].ResultColor();
       yield return new WaitForSeconds(0.1f);
     }
-    uiManager.CheckFinalWinning();
-    uiManager.EnableReset();
-    if (DisableScreen_object) DisableScreen_object.SetActive(false);
-    IsKenoComplete = true;
+    CheckPopup = true;
 
+    uiManager.CheckFinalWinning();
+    if (!uiManager.IsAutoPlay)
+    {
+      uiManager.EnableReset();
+    }
+    if (DisableScreen_object) DisableScreen_object.SetActive(false);
+    yield return new WaitUntil(() => !CheckPopup);
+    //  uiManager.BalanceAmt_Text.text = socketIOManager.playerdata.balance.ToString("F2");
+    uiManager.BalanceAmt_Text.text = socketIOManager.playerdata.balance.ToString("F2");
+
+
+    yield return new WaitForSeconds(0.5f);
+    IsKenoComplete = true;
+    audioController.StopMainAudio();
   }
 
   internal void ResetButtons()

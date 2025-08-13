@@ -14,7 +14,7 @@ public class SocketIOManager : MonoBehaviour
   // [SerializeField] private SlotBehaviour slotManager;
   [SerializeField] private UIManager uiManager;
   internal GameData initialData = null;
-  //internal UIData initUIData = null;
+  internal UiData initUIData = null;
   internal Payload resultData = null;
   internal Player playerdata = null;
   [SerializeField] internal List<string> bonusdata = null;
@@ -361,7 +361,7 @@ public class SocketIOManager : MonoBehaviour
       case "initData":
         {
           initialData = myData.gameData;
-          // initUIData = myData.message.UIData;
+           initUIData = myData.uiData;
           playerdata = myData.player;
           // bonusdata = myData.message.BonusData;
           // LineData = myData.message.GameData.Lines;
@@ -385,7 +385,7 @@ public class SocketIOManager : MonoBehaviour
           // resultData = myData.message.GameData;
           // playerdata = myData.message.PlayerData;
           resultData = myData.payload;
-       //   playerdata = myData.message.PlayerData;
+          playerdata = myData.player;
           isResultdone = true;
           break;
         }
@@ -611,6 +611,7 @@ public class Payload
 [Serializable]
 public class UiData
 {
+  public string description { get; set; }
 }
 
 [Serializable]
