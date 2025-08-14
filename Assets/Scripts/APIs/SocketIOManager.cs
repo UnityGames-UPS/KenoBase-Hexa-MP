@@ -219,6 +219,11 @@ public class SocketIOManager : MonoBehaviour
   {
     ParseResponse(data);
   }
+  void CloseGame()
+  {
+    Debug.Log("Unity: Closing Game");
+    StartCoroutine(CloseSocket());
+  }
 
   private void OnSocketState(bool state)
   {
@@ -361,7 +366,7 @@ public class SocketIOManager : MonoBehaviour
       case "initData":
         {
           initialData = myData.gameData;
-           initUIData = myData.uiData;
+          initUIData = myData.uiData;
           playerdata = myData.player;
           // bonusdata = myData.message.BonusData;
           // LineData = myData.message.GameData.Lines;
