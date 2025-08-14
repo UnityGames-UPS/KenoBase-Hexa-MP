@@ -265,6 +265,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &9460255
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,6 +676,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &34590720
 GameObject:
   m_ObjectHideFlags: 0
@@ -2876,6 +2878,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &112867421
 GameObject:
   m_ObjectHideFlags: 0
@@ -3292,6 +3295,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &137734489
 GameObject:
   m_ObjectHideFlags: 0
@@ -3568,6 +3572,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &140721050
 GameObject:
   m_ObjectHideFlags: 0
@@ -4112,6 +4117,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &152532578
 GameObject:
   m_ObjectHideFlags: 0
@@ -4330,6 +4336,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &170709938
 GameObject:
   m_ObjectHideFlags: 0
@@ -4740,6 +4747,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &174130272
 GameObject:
   m_ObjectHideFlags: 0
@@ -4883,6 +4891,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &180815512
 GameObject:
   m_ObjectHideFlags: 0
@@ -5025,6 +5034,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &180867022
 GameObject:
   m_ObjectHideFlags: 0
@@ -5301,6 +5311,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &185028061
 GameObject:
   m_ObjectHideFlags: 0
@@ -5577,6 +5588,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &201869742
 GameObject:
   m_ObjectHideFlags: 0
@@ -6224,6 +6236,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &240091510
 GameObject:
   m_ObjectHideFlags: 0
@@ -7029,6 +7042,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &272427196
 GameObject:
   m_ObjectHideFlags: 0
@@ -7571,6 +7585,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &290034786
 GameObject:
   m_ObjectHideFlags: 0
@@ -7981,6 +7996,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &312006448
 GameObject:
   m_ObjectHideFlags: 0
@@ -8257,6 +8273,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &337705562
 GameObject:
   m_ObjectHideFlags: 0
@@ -8399,6 +8416,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &353222842
 GameObject:
   m_ObjectHideFlags: 0
@@ -8541,6 +8559,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &370254000
 GameObject:
   m_ObjectHideFlags: 0
@@ -9293,6 +9312,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &454128969
 GameObject:
   m_ObjectHideFlags: 0
@@ -9675,6 +9695,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &513302670
 GameObject:
   m_ObjectHideFlags: 0
@@ -10270,6 +10291,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &587185602
 GameObject:
   m_ObjectHideFlags: 0
@@ -11700,6 +11722,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &674926719
 GameObject:
   m_ObjectHideFlags: 0
@@ -12051,6 +12074,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &679411779
 GameObject:
   m_ObjectHideFlags: 0
@@ -12907,6 +12931,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &702035149
 GameObject:
   m_ObjectHideFlags: 0
@@ -13049,6 +13074,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &711559530
 GameObject:
   m_ObjectHideFlags: 0
@@ -13191,6 +13217,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &718881127
 GameObject:
   m_ObjectHideFlags: 0
@@ -13378,6 +13405,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &732042141
 GameObject:
   m_ObjectHideFlags: 0
@@ -13520,6 +13548,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &738208885
 GameObject:
   m_ObjectHideFlags: 0
@@ -13662,6 +13691,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &747550491
 GameObject:
   m_ObjectHideFlags: 0
@@ -14014,6 +14044,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &765181590
 GameObject:
   m_ObjectHideFlags: 0
@@ -14156,6 +14187,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &770301051
 GameObject:
   m_ObjectHideFlags: 0
@@ -14376,6 +14408,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &779331845
 GameObject:
   m_ObjectHideFlags: 0
@@ -14519,6 +14552,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &781136605
 GameObject:
   m_ObjectHideFlags: 0
@@ -15138,6 +15172,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &787504744
 GameObject:
   m_ObjectHideFlags: 0
@@ -15548,6 +15583,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &826200611
 GameObject:
   m_ObjectHideFlags: 0
@@ -15824,6 +15860,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &861706480
 GameObject:
   m_ObjectHideFlags: 0
@@ -16805,6 +16842,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &903215554
 GameObject:
   m_ObjectHideFlags: 0
@@ -17210,6 +17248,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &907121944
 GameObject:
   m_ObjectHideFlags: 0
@@ -17352,6 +17391,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &907264556
 GameObject:
   m_ObjectHideFlags: 0
@@ -17494,6 +17534,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &911178900
 GameObject:
   m_ObjectHideFlags: 0
@@ -19167,6 +19208,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &980632907
 GameObject:
   m_ObjectHideFlags: 0
@@ -19577,6 +19619,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1027761712
 GameObject:
   m_ObjectHideFlags: 0
@@ -19719,6 +19762,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1035165206
 GameObject:
   m_ObjectHideFlags: 0
@@ -19862,6 +19906,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1037690781
 GameObject:
   m_ObjectHideFlags: 0
@@ -20411,6 +20456,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1072344904
 GameObject:
   m_ObjectHideFlags: 0
@@ -21089,6 +21135,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1089706072
 GameObject:
   m_ObjectHideFlags: 0
@@ -21664,6 +21711,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1124472027
 GameObject:
   m_ObjectHideFlags: 0
@@ -22415,6 +22463,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1169571849
 GameObject:
   m_ObjectHideFlags: 0
@@ -22742,6 +22791,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1195944618
 GameObject:
   m_ObjectHideFlags: 0
@@ -23398,6 +23448,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1205741751
 GameObject:
   m_ObjectHideFlags: 0
@@ -23541,6 +23592,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1208314874
 GameObject:
   m_ObjectHideFlags: 0
@@ -24281,6 +24333,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1242374006
 GameObject:
   m_ObjectHideFlags: 0
@@ -24691,6 +24744,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1259720877
 GameObject:
   m_ObjectHideFlags: 0
@@ -25190,6 +25244,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1268255372
 GameObject:
   m_ObjectHideFlags: 0
@@ -25600,6 +25655,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1305932778
 GameObject:
   m_ObjectHideFlags: 0
@@ -26144,6 +26200,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1349650333
 GameObject:
   m_ObjectHideFlags: 0
@@ -26364,6 +26421,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1352214722
 GameObject:
   m_ObjectHideFlags: 0
@@ -27922,6 +27980,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1418809227
 GameObject:
   m_ObjectHideFlags: 0
@@ -28735,6 +28794,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1470644588
 GameObject:
   m_ObjectHideFlags: 0
@@ -29571,6 +29631,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1498189909
 GameObject:
   m_ObjectHideFlags: 0
@@ -29981,6 +30042,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1546111806
 GameObject:
   m_ObjectHideFlags: 0
@@ -30587,6 +30649,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1568921999
 GameObject:
   m_ObjectHideFlags: 0
@@ -30730,6 +30793,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1570123979
 GameObject:
   m_ObjectHideFlags: 0
@@ -31189,6 +31253,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1599391285
 GameObject:
   m_ObjectHideFlags: 0
@@ -31642,6 +31707,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1621942940
 GameObject:
   m_ObjectHideFlags: 0
@@ -31918,6 +31984,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1634964113
 GameObject:
   m_ObjectHideFlags: 0
@@ -32328,6 +32395,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1656746024
 GameObject:
   m_ObjectHideFlags: 0
@@ -33456,6 +33524,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1698002701
 GameObject:
   m_ObjectHideFlags: 0
@@ -34101,7 +34170,7 @@ MonoBehaviour:
   uiManager: {fileID: 892691301}
   bonusdata: []
   JSManager: {fileID: 2003699288}
-  testToken: 11f7fc1c0ff04bc994523df4084aa702
+  testToken: 4ae57420afc2401ebe35b7f449885b1a
   RaycastBlocker: {fileID: 1559894785}
 --- !u!4 &1729652016
 Transform:
@@ -35072,6 +35141,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1791799288
 GameObject:
   m_ObjectHideFlags: 0
@@ -35692,6 +35762,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1808383624
 GameObject:
   m_ObjectHideFlags: 0
@@ -36122,6 +36193,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1832407804
 GameObject:
   m_ObjectHideFlags: 0
@@ -36875,6 +36947,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1885612401
 GameObject:
   m_ObjectHideFlags: 0
@@ -37017,6 +37090,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1888449497
 GameObject:
   m_ObjectHideFlags: 0
@@ -37757,6 +37831,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1905801400
 GameObject:
   m_ObjectHideFlags: 0
@@ -38167,6 +38242,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1946088373
 GameObject:
   m_ObjectHideFlags: 0
@@ -38968,6 +39044,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &1974080767
 GameObject:
   m_ObjectHideFlags: 0
@@ -39170,6 +39247,7 @@ GameObject:
   - component: {fileID: 1981140673}
   - component: {fileID: 1981140672}
   - component: {fileID: 1981140674}
+  - component: {fileID: 1981140675}
   m_Layer: 0
   m_Name: AudioController
   m_TagString: Untagged
@@ -39192,10 +39270,13 @@ MonoBehaviour:
   AudioClips:
   - {fileID: 8300000, guid: 417c811b95d3241c4a023ae2bc8d6417, type: 3}
   - {fileID: 8300000, guid: 0f09e72e9664b44ccb04528b51349cb8, type: 3}
-  - {fileID: 8300000, guid: 46b5afe06c17042849fff79d719c84fa, type: 3}
+  - {fileID: 8300000, guid: 3338a9f7d40e7455dbcc42ad6bad78b0, type: 3}
+  - {fileID: 8300000, guid: e316a59a023004021a7ad6a634b3c175, type: 3}
+  - {fileID: 8300000, guid: ea5cf5a6a5e6f4d27839c3d2b0af5f4d, type: 3}
   BgAudioSource: {fileID: 1981140673}
   MainAudioSource: {fileID: 1981140672}
   ButtonaudioSource: {fileID: 1981140674}
+  KenoAudioSource: {fileID: 1981140675}
 --- !u!4 &1981140671
 Transform:
   m_ObjectHideFlags: 0
@@ -39223,7 +39304,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.75
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -39317,9 +39398,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c45cf14b4372b45508bd84c6d76dbb9e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0bd2689d3da9a493ca29aa7d9ea1b246, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.608
+  m_Volume: 0.18
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -39404,6 +39485,102 @@ AudioSource:
     m_PostInfinity: 2
     m_RotationOrder: 4
 --- !u!82 &1981140674
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981140669}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1981140675
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40819,6 +40996,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &2045392846
 GameObject:
   m_ObjectHideFlags: 0
@@ -42076,6 +42254,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &2136640756
 GameObject:
   m_ObjectHideFlags: 0
@@ -42218,6 +42397,7 @@ MonoBehaviour:
   Red_Sprite: {fileID: 21300000, guid: 452708276dfb248baad1cd5ee7636519, type: 3}
   Yellow_Sprite: {fileID: 21300000, guid: c4d82f2bafc274fb6bb7db303a9d69c8, type: 3}
   KenoManager: {fileID: 1698002703}
+  audioController: {fileID: 1981140670}
 --- !u!1 &2143264860
 GameObject:
   m_ObjectHideFlags: 0

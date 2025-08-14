@@ -174,6 +174,7 @@ public class KenoBehaviour : MonoBehaviour
 
     for (int i = 0; i < Balls_Transform.Count; i++)
     {
+      audioController.PlayKenoAudio(4);
       if (MainNumber_Text) MainNumber_Text.text = ResultList[i].ToString();
       if (Balls_Text[i]) Balls_Text[i].text = ResultList[i].ToString();
       if (Balls_Transform[i]) Balls_Transform[i].DOLocalMoveY(middlePosition, 0.2f);

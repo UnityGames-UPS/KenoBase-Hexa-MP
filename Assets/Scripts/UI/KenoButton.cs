@@ -22,6 +22,7 @@ public class KenoButton : MonoBehaviour
   private KenoBehaviour KenoManager;
 
   internal bool isActive = false;
+  [SerializeField] private AudioController audioController;
 
   private void Start()
   {
@@ -41,6 +42,7 @@ public class KenoButton : MonoBehaviour
 
   internal void OnKenoSelect()
   {
+    audioController.PlayKenoAudio(3);
     isActive = !isActive;
     if (isActive)
     {

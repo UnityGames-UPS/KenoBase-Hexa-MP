@@ -9,7 +9,7 @@ public class AudioController : MonoBehaviour
     public AudioSource BgAudioSource;
     public AudioSource MainAudioSource;
     public AudioSource ButtonaudioSource;
-
+    public AudioSource KenoAudioSource;
     void Start()
     {
         BgAudioSource.Play();
@@ -36,6 +36,15 @@ public class AudioController : MonoBehaviour
         {
             ButtonaudioSource.clip = AudioClips[0]; // Assuming the first clip is for button sounds
             ButtonaudioSource.Play();
+        }
+    }
+
+    public void PlayKenoAudio(int index)
+    {
+        if (KenoAudioSource != null )
+        {
+            KenoAudioSource.clip = AudioClips[index]; // Assuming the second clip is for Keno sounds
+            KenoAudioSource.Play();
         }
     }
 
@@ -91,6 +100,7 @@ public class AudioController : MonoBehaviour
 
             MainAudioSource.mute = false;
             ButtonaudioSource.mute = false;
+            KenoAudioSource.mute = false;
 
 
         }
@@ -98,6 +108,7 @@ public class AudioController : MonoBehaviour
         {
             MainAudioSource.mute = true;
             ButtonaudioSource.mute = true;
+            KenoAudioSource.mute = true;
 
         }
     }
