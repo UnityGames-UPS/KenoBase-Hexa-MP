@@ -87,6 +87,7 @@ public class UIManager : MonoBehaviour
   internal bool IsAutoPlay = false;
 
   [SerializeField] private AudioController audioController;
+  [SerializeField] private Button skipwinButton;
 
   void Start()
   {
@@ -151,6 +152,8 @@ public class UIManager : MonoBehaviour
 
     NoQuit_Button.onClick.RemoveAllListeners();
     NoQuit_Button.onClick.AddListener(CloseQuitGamePopup);
+    skipwinButton.onClick.RemoveAllListeners();
+    skipwinButton.onClick.AddListener(delegate { WinPopupDisable(); audioController.StopMainAudio(); });
     //if (Win_Text) Win_Text.text = winning.ToString();
     // Application.ExternalCall("window.parent.postMessage", "OnEnter", "*");
   }

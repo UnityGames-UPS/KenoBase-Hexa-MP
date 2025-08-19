@@ -199,6 +199,7 @@ public class KenoBehaviour : MonoBehaviour
     yield return new WaitUntil(() => !CheckPopup);
     //  uiManager.BalanceAmt_Text.text = socketIOManager.playerdata.balance.ToString("F2");
     uiManager.BalanceAmt_Text.text = socketIOManager.playerdata.balance.ToString("F2");
+    if (uiManager.IsAutoPlay) yield return new WaitForSeconds(1f);
 
 
     yield return new WaitForSeconds(0.5f);
