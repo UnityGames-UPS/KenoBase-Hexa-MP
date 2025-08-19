@@ -126,7 +126,7 @@ public class UIManager : MonoBehaviour
     AutoPlay_Button.onClick.AddListener(AutoSpin);
 
     StopAutoPlay_Button.onClick.RemoveAllListeners();
-    StopAutoPlay_Button.onClick.AddListener(StopAutoPlayKeeno);
+    StopAutoPlay_Button.onClick.AddListener(delegate {  StartCoroutine(StopAutoPlayKeeno()); });
     Info_Button.onClick.RemoveAllListeners();
     Info_Button.onClick.AddListener(OpenInfoPanel);
     CloseInfo_Button.onClick.RemoveAllListeners();
@@ -207,9 +207,10 @@ public class UIManager : MonoBehaviour
       yield return null;
       yield return new WaitUntil(() => KenoManager.IsKenoComplete);
     }
+
   }
 
-  private void StopAutoPlayKeeno()
+  private IEnumerator StopAutoPlayKeeno()
   {
     audioController.PlayButtonAudio();
     if (IsAutoPlay)
@@ -219,6 +220,13 @@ public class UIManager : MonoBehaviour
       if (AutoPlay_Button) AutoPlay_Button.gameObject.SetActive(true);
       //StartCoroutine(StopAutoSpinCoroutine());
       IsAutoPlay = false;
+      // CheckPlayButton(true);
+      yield return new WaitUntil(() => KenoManager.IsKenoComplete);
+      EnableReset();
+    }
+    else
+    {
+      yield return null;
     }
   }
 

@@ -1240,7 +1240,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1261,7 +1261,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 56938650}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -34292,7 +34292,7 @@ MonoBehaviour:
   uiManager: {fileID: 892691301}
   bonusdata: []
   JSManager: {fileID: 2003699288}
-  testToken: 9f9c3b0642204cbfb1f7aa7c967ce8a7
+  testToken: d7546fa005e146c28a111491ae42d73f
   RaycastBlocker: {fileID: 1559894785}
 --- !u!4 &1729652016
 Transform:
@@ -36132,8 +36132,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.6, y: 29.62}
-  m_SizeDelta: {x: 949.39, y: 823.22}
+  m_AnchoredPosition: {x: 13.97, y: 29.62}
+  m_SizeDelta: {x: 972.14, y: 823.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1828654325
 MonoBehaviour:
