@@ -157,6 +157,11 @@ public class KenoBehaviour : MonoBehaviour
 
   private IEnumerator PlayGameRoutine()
   {
+    // if (socketIOManager.playerdata.balance < socketIOManager.initialData.bets[betCounter])
+    // {
+    //   uiManager.LowBalancePopupEnable();
+    //   yield break;
+    // }
     Debug.Log($"Starting Keno Game with {SelectedList.Count} selections.");
     // uiManager.BalanceAmt_Text.text = socketIOManager.playerdata.balance.ToString("F2");
     IsKenoComplete = false;

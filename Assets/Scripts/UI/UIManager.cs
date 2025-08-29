@@ -30,6 +30,7 @@ public class UIManager : MonoBehaviour
   [SerializeField] private Button QuitGame_Button;
   [SerializeField] private Button YesQuit_Button;
   [SerializeField] private Button NoQuit_Button;
+  [SerializeField] private Button LowBalanceOk_Button;
 
 
 
@@ -65,6 +66,7 @@ public class UIManager : MonoBehaviour
   [SerializeField] private GameObject CoinAnim_Object;
   [SerializeField] private GameObject InfoScreen_object;
   [SerializeField] private GameObject QuitGame_Object;
+  [SerializeField] private GameObject LowBalance_Object;
 
 
   [Header("Image Animation Script")]
@@ -126,7 +128,7 @@ public class UIManager : MonoBehaviour
     AutoPlay_Button.onClick.AddListener(AutoSpin);
 
     StopAutoPlay_Button.onClick.RemoveAllListeners();
-    StopAutoPlay_Button.onClick.AddListener(delegate {  StartCoroutine(StopAutoPlayKeeno()); });
+    StopAutoPlay_Button.onClick.AddListener(delegate { StartCoroutine(StopAutoPlayKeeno()); });
     Info_Button.onClick.RemoveAllListeners();
     Info_Button.onClick.AddListener(OpenInfoPanel);
     CloseInfo_Button.onClick.RemoveAllListeners();
@@ -154,6 +156,9 @@ public class UIManager : MonoBehaviour
     NoQuit_Button.onClick.AddListener(CloseQuitGamePopup);
     skipwinButton.onClick.RemoveAllListeners();
     skipwinButton.onClick.AddListener(delegate { WinPopupDisable(); audioController.StopMainAudio(); });
+
+    LowBalanceOk_Button.onClick.RemoveAllListeners();
+    LowBalanceOk_Button.onClick.AddListener(delegate { CloseLowbalancePanel(); });
     //if (Win_Text) Win_Text.text = winning.ToString();
     // Application.ExternalCall("window.parent.postMessage", "OnEnter", "*");
   }
@@ -165,6 +170,12 @@ public class UIManager : MonoBehaviour
 
   private void PlayKeeno()
   {
+    if (socketManager.playerdata.balance < socketManager.initialData.bets[KenoManager.betCounter])
+    {
+      LowBalancePopupEnable();
+      if(IsAutoPlay) StartCoroutine(StopAutoPlayKeeno());
+      return;
+      }
     audioController.PlayButtonAudio();
     if (StarAnim_Object) StarAnim_Object.SetActive(true);
     if (isReset)
@@ -201,7 +212,7 @@ public class UIManager : MonoBehaviour
 
   private IEnumerator AutoPlayKeenoRoutine()
   {
-    while (IsAutoPlay)
+    while (IsAutoPlay )
     {
       PlayKeeno();
       yield return null;
@@ -314,6 +325,12 @@ public class UIManager : MonoBehaviour
     audioController.PlayButtonAudio();
     if (MainPopup_Object) MainPopup_Object.SetActive(false);
     if (MaxPopup_Object) MaxPopup_Object.SetActive(false);
+  }
+
+  internal void LowBalancePopupEnable()
+  {
+    if (MainPopup_Object) MainPopup_Object.SetActive(true);
+    if (LowBalance_Object) LowBalance_Object.SetActive(true);
   }
 
   internal void UpdateSelectedText()
@@ -449,6 +466,13 @@ public class UIManager : MonoBehaviour
     audioController.PlayButtonAudio();
     ClosePopup(InfoScreen_object);
     if (MainPopup_Object) MainPopup_Object.SetActive(false);
+  }
+  private void CloseLowbalancePanel()
+  {
+    audioController.PlayButtonAudio();
+    // ClosePopup(LowBalance_Object);
+    if (MainPopup_Object) MainPopup_Object.SetActive(false);
+    LowBalance_Object.SetActive(false);
   }
 
   private void ToggleSound(bool IsOn)
