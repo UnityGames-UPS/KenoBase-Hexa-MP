@@ -159,6 +159,9 @@ public class UIManager : MonoBehaviour
 
     LowBalanceOk_Button.onClick.RemoveAllListeners();
     LowBalanceOk_Button.onClick.AddListener(delegate { CloseLowbalancePanel(); });
+
+    CloseDisconnect_Button.onClick.RemoveAllListeners();
+    CloseDisconnect_Button.onClick.AddListener(delegate { StartCoroutine(socketManager.CloseSocket()); });
     //if (Win_Text) Win_Text.text = winning.ToString();
     // Application.ExternalCall("window.parent.postMessage", "OnEnter", "*");
   }
