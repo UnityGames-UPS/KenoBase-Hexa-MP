@@ -194,8 +194,12 @@ public class SocketIOManager : MonoBehaviour
   private void OnDisconnected() //Back2 Start
   {
     Debug.LogWarning("⚠️ Disconnected from server.");
+    Debug.Log("On Disconnected Called :");
     isConnected = false;
-    uiManager.DisconnectionPopup();
+    if (!uiManager.IsQuitSelf)
+    {
+      uiManager.DisconnectionPopup();
+    }
     ResetPingRoutine();
   } //Back2 end
   private void OnPongReceived(string data) //Back2 Start

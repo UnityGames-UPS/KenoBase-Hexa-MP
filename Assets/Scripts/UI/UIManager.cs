@@ -90,6 +90,7 @@ public class UIManager : MonoBehaviour
 
   [SerializeField] private AudioController audioController;
   [SerializeField] private Button skipwinButton;
+  internal bool IsQuitSelf =false;
 
   void Start()
   {
@@ -529,6 +530,7 @@ public class UIManager : MonoBehaviour
   }
   private void QuitGame()
   {
+    IsQuitSelf = true;
     audioController.PlayButtonAudio();
     StartCoroutine(socketManager.CloseSocket());
     ClosePopup(QuitGame_Object);
