@@ -92,6 +92,8 @@ public class UIManager : MonoBehaviour
   [SerializeField] private Button skipwinButton;
   internal bool IsQuitSelf =false;
 
+  [SerializeField] internal GameObject SelectionIndicatorObject;
+
   void Start()
   {
     IsAutoPlay = false;
@@ -421,6 +423,8 @@ public class UIManager : MonoBehaviour
     WinningsTextUpdate(0);
     KenoManager.CleanPage();
     CheckPlayButton(false);
+    SelectionIndicatorObject.SetActive(true);
+
   }
 
   internal void DisconnectionPopup()

@@ -116,10 +116,13 @@ public class KenoBehaviour : MonoBehaviour
     if (selectionCounter >= 2)
     {
       uiManager.CheckPlayButton(true);
+      uiManager.SelectionIndicatorObject.SetActive(false);
+
     }
     else
     {
       uiManager.CheckPlayButton(false);
+      uiManager.SelectionIndicatorObject.SetActive(true);
     }
     uiManager.UpdateSelectedText();
   }
@@ -130,10 +133,13 @@ public class KenoBehaviour : MonoBehaviour
     if (selectionCounter >= 2)
     {
       uiManager.CheckPlayButton(true);
+      uiManager.SelectionIndicatorObject.SetActive(false);
+
     }
     else
     {
       uiManager.CheckPlayButton(false);
+      uiManager.SelectionIndicatorObject.SetActive(true);
     }
     uiManager.UpdateSelectedText();
   }

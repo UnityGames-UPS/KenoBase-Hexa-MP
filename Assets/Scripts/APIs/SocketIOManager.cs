@@ -214,9 +214,9 @@ public class SocketIOManager : MonoBehaviour
 
   private void OnError(Error err)
   {
-    Debug.LogError("Error: " + err);
-#if Unity_WEBGL && !UNITY_EDITOR
-        JSManager.SendCustomMessage("error");
+    Debug.LogError("Socket Error Message: " + err);
+#if UNITY_WEBGL && !UNITY_EDITOR
+    JSManager.SendCustomMessage("error");
 #endif
   }
 
